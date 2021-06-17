@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Router } from "@reach/router";
+// import { useSelector } from "react-redux";
+// import { selectUser } from "./reducers/userSlice/userSlice";
 
-function App() {
+import LogIn from "./components/LogIn/LogIn";
+import Home from "./components/LogOut/Home/Home";
+import HomeDetailsInner from "./components/LogOut/HomeDetailsInner/HomeDetailsInner";
+
+const App = () => {
+  // const user = useSelector(selectUser);
+  // console.log(user);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Router>
+        <LogIn path="/" />
+        <Home path="home" />
+        <HomeDetailsInner path="/home/:id" />
+      </Router>
+    </React.Fragment>
   );
-}
+};
 
 export default App;

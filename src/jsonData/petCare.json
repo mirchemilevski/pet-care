@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "type": "dog",
+    "img": "images1",
+    "city": "London",
+    "country": "England",
+    "phone": "+44 7305 711646",
+    "person": "Arthur"
+  },
+  {
+    "id": 2,
+    "type": "dog",
+    "img": "images2",
+    "city": "New York City",
+    "country": "United States",
+    "phone": "+1 212 336 1440",
+    "person": "Liam"
+  },
+  {
+    "id": 3,
+    "type": "cat",
+    "img": "images5",
+    "city": "Paris",
+    "country": "France",
+    "phone": "+33 1 40 75 08 75",
+    "person": "Louise"
+  },
+  {
+    "id": 4,
+    "type": "cat",
+    "img": "images6",
+    "city": "Moscow",
+    "country": "Russia",
+    "phone": "+7 495 697 03 49",
+    "person": "Alisa"
+  },
+  {
+    "id": 5,
+    "type": "cat",
+    "img": "images7",
+    "city": "Tokyo",
+    "country": "Japan",
+    "phone": "+81 3 5321 1111",
+    "person": "Sakura"
+  },
+  {
+    "id": 6,
+    "type": "dog",
+    "img": "images3",
+    "city": "Dubai",
+    "country": "United Arab Emirates",
+    "phone": "+971 4 888 8888",
+    "person": "Mansour"
+  },
+  {
+    "id": 7,
+    "type": "dog",
+    "img": "images4",
+    "city": "Barcelona",
+    "country": "Spain",
+    "phone": "+34 932 08 04 14",
+    "person": "Hanna"
+  },
+  {
+    "id": 8,
+    "type": "cat",
+    "img": "images8",
+    "city": "Seoul",
+    "country": "South Korea",
+    "phone": "+82 2 555 6260",
+    "person": "Si-woo"
+  }
+]
