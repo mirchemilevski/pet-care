@@ -1,9 +1,18 @@
 import React from "react";
 import { Link } from "@reach/router";
+import { useDispatch } from "react-redux";
+import { deleteToDo } from "../../../reducers/todoSlice/todoSlice";
 
 import styled from "styled-components";
 
 const HomeDetails = ({ type, img, id }) => {
+  const dispatch = useDispatch();
+
+  const handleDelete = () => {
+    dispatch(deleteToDo({ id: id }));
+    console.log(id);
+  };
+
   return (
     <HomeDetailsWrapper>
       <div className="home-details">
@@ -13,6 +22,11 @@ const HomeDetails = ({ type, img, id }) => {
           <button>
             <Link to={`/home/${id}`}>Additional information </Link>
           </button>
+          <div className="delete-btn-container">
+            <div className="delete-button" onClick={handleDelete}>
+              <div className="tooltip">Delete item</div>
+            </div>
+          </div>
         </div>
       </div>
     </HomeDetailsWrapper>
@@ -20,7 +34,7 @@ const HomeDetails = ({ type, img, id }) => {
 };
 
 const HomeDetailsWrapper = styled.div`
-  width: 70%;
+  width: 65%;
   margin: 0 auto;
   .home-details {
     padding-bottom: 4%;
@@ -62,9 +76,40 @@ const HomeDetailsWrapper = styled.div`
         text-transform: uppercase;
         display: none;
 
-        a{
+        a {
           text-decoration: none;
-          color:white;
+          color: white;
+        }
+      }
+
+      .delete-btn-container {
+        position: absolute;
+        top: 2%;
+        right: 3%;
+        width: 10%;
+        height 10%;
+
+        .delete-button {
+          position:relative;
+          width: 100%;
+          height 100%;
+          cursor: pointer;
+          margin: 0%;
+          background-image: url("/images/deleteIcon.png");
+          background-position: center;
+          background-repeat: no-repeat; 
+          background-size: cover; 
+
+          .tooltip{
+            position:absolute;
+            top: 2%;
+            right: -400%;
+            display:none;
+          }
+        }
+
+        .delete-button:hover + .tooltip{
+          display:block;
         }
       }
     }
